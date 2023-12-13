@@ -1,7 +1,73 @@
-<h1>My plan was originally to make the heart on one side and on the other side I would write a cute message for you. However as I sat there thinking I started to realize problems with that idea. \
-  Mainly that I wouldnt have space for all the things I want to tell you. I spend all day every single day thinking about you. 
-  There is not a single second that you dont spend taking up all the space in my mind and because of this I have so so many things I wanted to write here for you.
-  As i think of all the amazing things i could say to you all i can think about is how 
-  beautiful, radiant, captivating, enchanting, adorable, lovely, irresistable, elegant, graceful, exquisite, charming, stunning, gorgeous, breathtaking, angelic, heartwarming, dazzling, sparkling, heavenly, mesmerizing, enamoring, lovable, kind, amazing, cute, thoughtful, caring, pretty, wonderful, incredible, sweet... 
-  I cant stop, all i can think about is you. Your splendor is ineffable. 
-</h1>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head> 
+  <title>I Love You <3</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f8f8f8;
+        margin: 0;
+      }
+
+      .heart {
+        width: 100px;
+        height: 100px;
+        background_color: red;
+        position: relative;
+        transform: rotate(-45deg);
+        animation: heartbeat is infinite;
+      }
+
+      .heart::before,
+      .heart::after {
+        content: '';
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+      }
+
+      .heart::before {
+        top: -50px;
+        left: 0px;
+      }
+
+      .heart::after {
+        top: 0;
+        left: 50px;
+      }
+
+      @keyframes heartbeat {
+        0%, 100% {
+          transform: scale(1)
+        }
+        50% {
+          transform: scale(1.1)
+        }
+      }
+      
+      
+    </style>
+  </head>
+
+<body>
+  <div class="heart">
+  </div>
+  <div class="main">
+    <h1></h1>
+  
+    <h1>My plan was originally to make the heart on one side and on the other side I would write a cute message for you. However as I sat there thinking I started to realize problems with that idea. 
+      Mainly that I wouldnt have space for all the things I want to tell you. I spend all day every single day thinking about you. 
+      <br> <br>
+      There is not a single second that you dont spend taking up all the space in my mind and because of this I have so so many things I wanted to write here for you.
+      As i think of all the amazing things i could say to you all i can think about is how 
+      beautiful, radiant, captivating, enchanting, adorable, lovely, irresistable, elegant, graceful, exquisite, charming, stunning, gorgeous, breathtaking, angelic, heartwarming, dazzling, sparkling, heavenly, mesmerizing, enamoring, lovable, kind, amazing, cute, thoughtful, caring, pretty, wonderful, incredible, sweet... 
+      I cant stop, all i can think about is you. Your splendor is ineffable. 
+    </h1>
+  </div>
+</body>
