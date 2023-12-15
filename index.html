@@ -2,23 +2,68 @@
 
 <html lang="en">
   <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet">
   <title>I Love You <3</title>
-    
   </head>
 
 <body>
-  <div class="header">
-  </div>
-  <div class="main">
-    <h1></h1>
-  
-    <h1>My plan was originally to make the heart on one side and on the other side I would write a cute message for you. However as I sat there thinking I started to realize problems with that idea. 
-      Mainly that I wouldnt have space for all the things I want to tell you. I spend all day every single day thinking about you. 
-      <br> <br>
-      There is not a single second that you dont spend taking up all the space in my mind and because of this I have so so many things I wanted to write here for you.
-      As i think of all the amazing things i could say to you all i can think about is how 
-      beautiful, radiant, captivating, enchanting, adorable, lovely, irresistable, elegant, graceful, exquisite, charming, stunning, gorgeous, breathtaking, angelic, heartwarming, dazzling, sparkling, heavenly, mesmerizing, enamoring, lovable, kind, amazing, cute, thoughtful, caring, pretty, wonderful, incredible, sweet... 
-      I can go on, all i can think about is you. Your splendor is ineffable. 
-    </h1>
-  </div>
+  <!-- create hearts to fill the page-->
+  <div id="hearts"></div>
+  <script>
+              // Number of hearts to create
+    const numberOfHearts = 100;
+
+    const hearts = document.getElementById("hearts")
+    // variables to move every new element
+    let push_right = 0;
+    let push_down = 0;
+    
+    if (!hearts) {
+        console.log("Could not find div with id hearts.")
+    } else {
+      for (let j = 0; j < numberOfHearts; j++) {
+        for (let i = 0; i < numberOfHearts; i++) {
+          // Create a new heart element
+          const heart = document.createElement('div');
+          
+          heart.id = 'heart';
+          heart.style.top = String(push_down * 100) + "px";
+          heart.style.left  = String(push_right * 100) + "px";
+          push_right ++;   
+        // Append the heart element to the body
+        hearts.appendChild(heart);
+        }
+        push_down ++;
+        push_right = 0 - push_down;
+      }
+    }
+  </script>
+
+<div id="main">
+  <!-- my text for her-->
+  <h1>My plan was originally to make the heart on one side and on the other side I would write a cute message for you. However as I sat there thinking I started to realize problems with that idea. 
+    Mainly that I wouldnt have space for all the things I want to tell you. I spend all day every single day thinking about you. 
+    <br><br>
+    There is not a single second that you dont spend taking up all the space in my mind and because of this I have so so many things I wanted to write here for you.
+    As i think of all the amazing things i could say to you all i can think about is how 
+    beautiful, radiant, captivating, enchanting, adorable, lovely, irresistable, elegant, graceful, exquisite, charming, stunning, gorgeous, breathtaking, angelic, heartwarming, dazzling, sparkling, heavenly, mesmerizing, enamoring, lovable, kind, amazing, cute, thoughtful, caring, pretty, wonderful, incredible, sweet... 
+    I can go on, all i can think about is you. Your splendor is ineffable. 
+    <br><br>
+    Every second i spend with you I think i am in heaven because spending time with you is paradise and youre such an angel.
+    <br><br>
+    As I look into your eyes I get lost in the emmaculate beauty hidden behind them, for you are the first person I've met who's heart is as beautiful as their face.
+    <br><br>
+    Even though hours with you seem to pass in mere seconds every instant i spend in your arms fills me with enough happiness for a thousand life times. 
+    <br><br>
+    I would drive a million miles just to be with you and with how this year is going it seems like I might just do that before the end of the year.
+    <br><br>
+    Somehow my dreams only seem to start once ive woken up and started talking to you.
+    <br><br>
+    You are so sweet, like a nectar, which explains why I get so many butterflies arround you.
+    <br><br>
+    You somehow take all the thoughts raging in my mind and crush them all to one overwhelming thought so that all i can think about when youre arround is how much I Love You &lt;3
+  </h1>
+</div>
 </body>
